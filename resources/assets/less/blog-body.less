@@ -1,0 +1,246 @@
+.sc-article-body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  color: #484848;
+
+  //  h1:after {
+  //    content: "\f1dd";
+  //    font-family: FontAwesome;
+  //    color: rgb(53, 53, 53);
+  //    padding-left: 12px;
+  //    //    font-weight: bold;
+  //    font-size: 30px;
+  //
+  //    display: none;
+  //    .transition-duration(0.5s);
+  //  }
+  //  h1:hover:after {
+  //    display: inline-block;
+  //  }
+
+  //supporting h1-h3 is enough for a blog
+  h1, h2, h3 {
+    font-weight: 200;
+  }
+
+  h1 {
+    font-size: 2.55em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.49em;
+    font-weight: 600;
+  }
+
+  h4 {
+    color: #484848;
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  ol {
+    position: relative;
+    counter-reset: li;
+
+    padding-left: 2.94em;
+  }
+  ol li {
+    list-style: none;
+    position: relative;
+  }
+
+  ol li:before {
+    content: counter(li);
+    counter-increment: li;
+    font: bold 2.94em/1 Sans-Serif;
+
+    position: absolute;
+    left: -2.35rem;
+    top: 0.29rem;
+
+  }
+  ol li p {
+    padding: 8px;
+    margin-bottom: 0;
+    border-left: 1px solid #999;
+
+    &:first-child {
+      font-size: 1.2em;
+    }
+  }
+  ol li p em {
+    font-style: italic;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 2.94em;
+  }
+
+  ul li {
+    position: relative;
+    padding-bottom: 5px;
+
+    p {
+
+      &:first-child {
+        font-size: 1.2em;
+      }
+    }
+  }
+  ul li:before {
+    position: absolute;
+    left: -2.06em;
+
+    font-family: 'FontAwesome';
+    content: '\f054';
+  }
+
+  dl {
+    counter-reset: my-badass-counter;
+  }
+
+  dl dt {
+    position: relative;
+    padding: 4px 0 10px 0;
+    font: bold 1.06em Georgia;
+    font-style: italic;
+  }
+
+  dl dd {
+    margin: 0 0 2.94em 0;
+  }
+
+  dl dt, dl dd {
+    padding-left: 2.94em;
+  }
+
+  dl dt:before {
+    content: counter(my-badass-counter);
+    counter-increment: my-badass-counter;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    font: bold 2.94em/1 Sans-Serif;
+  }
+
+  .tag-title {
+
+    .tag-control {
+      padding-left: 1.06em;
+      .transition-duration(0.5s);
+    }
+
+  }
+
+  .tag-content {
+    display: none;
+
+    .subhead {
+      font-size: 1em;
+    }
+
+    .sc-article-meta {
+      color: #cccccc;
+      font-size: 0.9em;
+    }
+  }
+
+  table {
+    //.table
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: @line-height-computed;
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          padding: @table-cell-padding;
+          line-height: @line-height-base;
+          vertical-align: top;
+          border-top: 1px solid @table-border-color;
+        }
+      }
+    }
+    // Bottom align for column headings
+    > thead > tr > th {
+      vertical-align: bottom;
+      border-bottom: 2px solid @table-border-color;
+    }
+    // Remove top border from thead by default
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+      > tr:first-child {
+        > th,
+        > td {
+          border-top: 0;
+        }
+      }
+    }
+    // Account for multiple tbody instances
+    > tbody + tbody {
+      border-top: 2px solid @table-border-color;
+    }
+
+    // Nesting
+    .table {
+      background-color: @body-bg;
+    }
+
+    //bordered
+    border: 1px solid @table-border-color;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 1px solid @table-border-color;
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
+    }
+
+    //striped
+    > tbody > tr:nth-child(odd) {
+      background-color: @table-bg-accent;
+    }
+
+    //hover
+    > tbody > tr:hover {
+      background-color: @table-bg-hover;
+    }
+  }
+
+  img:not(.emoji) {
+    //  width: auto;
+    width: 100%;
+    max-width: 600px;
+    //    border: 1px @sc-brown-dark solid;
+    //    border-radius: 2px;
+
+    //    padding: 15px 15px 0;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+    border-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+  }
+
+}

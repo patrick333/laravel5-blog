@@ -1,0 +1,71 @@
+#header {
+  background-color: @sc-blue-header;
+  border-bottom-color: #ccc;
+  box-shadow: 0 2px 8px #ccc;
+  margin-bottom: 10px;
+
+  font-size: 1rem;
+
+  .navbar-nav > li > a {
+    padding-left: 1.29em;
+    color: white;
+    .transition-duration(0.5s);
+  }
+  .navbar-nav > li > a:hover {
+    //    color: @sc-blue-header;
+    color: lighten(@sc-yellow-light, 10%);
+  }
+  .navbar-nav > li > a.sh-home-projects:hover {
+    background-color: #a6e1ec;
+  }
+  .navbar-nav > li > a.sh-home-portfolio:hover {
+    background-color: rgba(244, 88, 92, 0.71);
+  }
+  .navbar-nav > li > a.sh-home-contact:hover {
+    background-color: rgba(128, 0, 128, 0.47);
+  }
+  .navbar-nav > li > a.sh-home-blog:hover {
+    background-color: #ffdd88;
+  }
+
+  .navbar-header {
+    //    margin-left: 120px;
+
+    .navbar-brand img {
+      padding: 0 60px;
+      height: 35px;
+      margin-top: -8px;
+    }
+
+  }
+
+  //on desktop and tablet portrait, bigger than a ipad(768px).
+  @media (min-width: 768px) {
+    #top-navbar-collapse {
+
+
+      .navbar-nav {
+        position: relative;
+
+        li {
+          font-size: 1.0em;
+          width: 6em;
+
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+          }
+        }
+        li.li-home{
+          width: 8em;
+        }
+        li.li-dashboard {
+          margin-left: 0.59em;
+        }
+      }
+    }
+
+  }
+
+}

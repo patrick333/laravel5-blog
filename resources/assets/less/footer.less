@@ -1,0 +1,52 @@
+#footer {
+  padding: 20px 30px 20px;
+  background-color: @sc-brown-dark;
+  color: white;
+
+  .font-basic();
+  .bottom-nav {
+
+  }
+  .bottom-nav ul li {
+    display: inline-block;
+  }
+  .bottom-nav ul li + li:before {
+    content: '| ';
+  }
+  .bottom-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  .bottom-nav a:hover {
+    color: @sc-yellow-light;
+  }
+
+  h4 {
+    color: white;
+  }
+  div {
+    color: darken(white, 25%);
+  }
+
+  button,a.btn {
+    color: white;
+    background-color: lighten(black, 30%);
+    .transition-duration(0.5s);
+  }
+  button:hover, a.btn:hover {
+    background-color: @sc-blue-header;
+  }
+
+  .container-fluid {
+    position: relative;
+    .sc-btn-rocket {
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
+  }
+
+  .sc-copyright {
+    margin: 2.35em auto 0.59em;
+  }
+}

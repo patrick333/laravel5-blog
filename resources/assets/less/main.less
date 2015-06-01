@@ -1,0 +1,167 @@
+
+.main-body {
+  padding: 0;
+
+  transition: width 0.2s ease;
+
+  .main-content {
+    background-color: white;
+
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px #ccc;
+
+    position: relative;
+
+    .sc-side-control {
+      background-color: #4d4d4d;
+      color: white;
+      height: 40px;
+
+      border-radius: 0;
+      //      border-top-right-radius:4px;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+    }
+
+    //    .sc-side-control:hover {
+    //      background-color: @sc-blue-header;
+    //    }
+
+    .sc-side-dock {
+      position: absolute;
+      right: 40px;
+      top: 0;
+      z-index: 1000;
+      //set to a value other than 0, to avoid overlapping by col-*-* of bootstrap
+      //(col-*-* has position:relative on it)
+    }
+  }
+  @media (max-width: 992px) {
+    .main-content {
+      margin-right: 0;
+    }
+  }
+}
+
+.sc-block-head {
+  margin: 60px auto 60px;
+}
+
+.sc-section {
+  padding: 20px 0;
+  min-height: 500px;
+
+  .sc-section-title {
+    text-align: center;
+    margin: 50px 0 30px;
+  }
+  .sc-section-body {
+
+  }
+}
+
+.sc-section:not(:last-child) {
+  //  border-bottom:dashed 2px @sc-bg;
+  border-bottom: solid 5px @sc-bg;
+}
+
+#welcome {
+
+  background-image: url('/images/bridge.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .sc-section-body {
+    margin-top: 80px;
+    h1, h2, h3, h4 {
+      font-weight: 300;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .sc-service-detail,.sc-tech-detail {
+      color: white;
+      text-align: center;
+      padding: 30px 60px;
+      font-size: 1.3em;
+      //    line-height: 130%;
+    }
+    .sc-service-detail{
+
+      text-transform: capitalize;
+      line-height: 120%;
+    }
+
+  }
+
+}
+
+#projects {
+
+  .sc-project-list {
+    padding: 0 20px;
+
+    .sc-project {
+
+      margin-bottom: 20px;
+
+      .sc-project-logo {
+        padding: 10px 0;
+        text-align: center;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+      .sc-project-content {
+        padding: 0.8em 0;
+        h2 {
+          margin-top: 0;
+          font-size: 2.2em;
+        }
+        p {
+          color: lighten(black, 30%);
+          font-size: 1.1em;
+          margin: 0.5em 0;
+        }
+      }
+    }
+  }
+}
+
+#portfolio {
+  //  color: white;
+  background-color: rgba(211, 241, 255, 0.45);
+
+  h1, h2, h3, h4 {
+    //    color: white;
+  }
+
+  #sc-portfolio-demo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+#contact {
+  .sc-about-me {
+    padding: 0 20px;
+  }
+
+  .sc-contact-form {
+    padding: 0 20px;
+  }
+}
+
+
+
