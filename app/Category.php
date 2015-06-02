@@ -11,7 +11,6 @@ class Category extends Model {
         return $this -> hasMany('App\Article');
     }
 
-  //slug functions
     public function setSlugAttribute($data)
     {
         $this->attributes['slug']=str_slug($data);
@@ -22,7 +21,6 @@ class Category extends Model {
         return $query->whereSlug($slug)->firstOrFail();
     }
 
-    // functions of category levels
     public function scopeGetTopLevel($query)
     {
         return $query->where('parent_id', 0)->get();

@@ -3,11 +3,6 @@
     {!! Form::text('name', null, ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
 </div>
 
-{{--<div class="form-group">--}}
-    {{--{!! Form::label('slug', 'Slug:') !!}--}}
-    {{--{!! Form::text('slug', null, ['class' => 'form-control']) !!}--}}
-{{--</div>--}}
-
 <div class="form-group">
     {!! Form::label('parent_id', 'Parent:') !!}
     {!! Form::select('parent_id', $categories, null, ['id' => 'parent_id', 'class' => 'form-control']) !!}

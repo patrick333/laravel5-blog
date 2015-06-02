@@ -10,8 +10,6 @@ class Article extends Model {
 
     protected $appends = ['tag_list','body_html','excerpt_html'];
     protected $fillable = ['category_id','title','subhead', 'body','excerpt','slug','published'];
-    //or use guarded.
-    //protected $guarded = ['*'];// disable mass assignmen.
 
     public function tags()
     {
@@ -29,22 +27,12 @@ class Article extends Model {
     }
 
     public function scopePublished($query){
-        return $query->where('published','=','1');//use return or not.
+        return $query->where('published','=','1');
     }
-
-    //the setter and getter of published is not necessary. Because they do not override the default ones.
-//    public function getPublishedAttribute(){
-//        return $this->attributes['published'];
-//    }
-//    public function setPublishedAttribute($value){
-//        $this->attributes['published']=$value;
-//    }
 
     public function getBodyHtmlAttribute()
     {
         $Parsedown = new \Parsedown();
-//        dump($this->body);
-//        dd($Parsedown->text($this->body));
         return $Parsedown->text($this->body);
     }
 

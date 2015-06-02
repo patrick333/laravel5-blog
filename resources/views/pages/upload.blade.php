@@ -10,8 +10,7 @@
             {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
             <div class="control-group">
                 <div class="controls">
-                    {{--{!! Form::url('url');  !!}--}}
-                    {{--{!! Form::textarea('textarea') !!}--}}
+
                     {!! Form::select('size', array('L' => 'Large', 'S' => 'Small'), 'S') !!}
                     {!! Form::file('image') !!}
                     <p class="errors">{!!$errors->first('image')!!}</p>

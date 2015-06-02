@@ -22,8 +22,6 @@ class AuthenticateUser {
     public function execute($request, $listener, $provider) {
         if (!$request) return $this->getAuthorizationFirst($provider);
 
-//        dd($this->getSocialUser($provider));
-
         $user = $this->users->findByUserNameOrCreate($provider,$this->getSocialUser($provider));
 
         $this->auth->login($user, true);

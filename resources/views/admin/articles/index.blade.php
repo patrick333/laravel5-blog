@@ -7,8 +7,6 @@
 
 @section('content')
 
-    {{--<div class="col-lg-12">--}}
-    {{--<div class="table-responsive">--}}
     <table class="table table-striped table-hover" id="dataTables-example">
         <thead>
         <tr>
@@ -55,8 +53,6 @@
         @endforeach
         </tbody>
     </table>
-    {{--</div>--}}
-    {{--</div>--}}
 
 
     <div class="col-md-6 col-md-push-3">
