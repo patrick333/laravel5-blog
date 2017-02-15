@@ -7,7 +7,7 @@ php:
 
 
 mysql:
-  database: travis_ci_drupal_module_example_test
+  database: travis_ci_laravel5_blog_test
   username: root
   encoding: utf8
 
